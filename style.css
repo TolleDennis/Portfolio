@@ -203,7 +203,7 @@ section .title::after {
 
 .home {
     display: flex;
-    background: url("images/banner.jpg") no-repeat center;
+    background: url("assets/banner.jpg") no-repeat center;
     height: 100vh;
     color: rgb(2, 2, 2);
     min-height: 500px;
@@ -598,122 +598,183 @@ section .title::after {
 
 /* contact section styling */
 
-.contact .title::after {
-    content: "get in touch";
+.contact .info {
+    width: 100%;
+    background: #fff;
 }
 
-.contact .contact-content .column {
-    width: calc(50% - 30px);
-}
-
-.contact .contact-content .text {
+.contact .info i {
     font-size: 20px;
+    color: #34b7a7;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #effbf9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .section-title h2 {
+    padding: 0 0 0 0px;
+    font-size: 22px;
     font-weight: 600;
-    margin-bottom: 10px;
+    align-content: center;
+    color: #222222;
 }
 
-.contact .contact-content .left p {
-    text-align: justify;
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #222222;
 }
 
-.contact .contact-content .left .icons {
-    margin: 10px 0;
+.contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #555555;
 }
 
-.contact .contact-content .row {
-    display: flex;
-    height: 65px;
-    align-items: center;
+.contact .info .email,
+.contact .info .phone {
+    margin-top: 40px;
 }
 
-.contact .contact-content .row .info {
-    margin-left: 30px;
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+    background: #34b7a7;
+    color: rgb(250, 245, 245);
 }
 
-.contact .contact-content .row i {
-    font-size: 25px;
-    color: rgb(50, 65, 226);
-    ;
-}
-
-.contact .contact-content .info .head {
-    font-weight: 500;
-}
-
-.contact .contact-content .info .sub-title {
-    color: #333;
-}
-
-.contact .right form .fields {
-    display: flex;
-}
-
-.contact .right form .field,
-.contact .right form .fields .field {
-    height: 45px;
+.contact .php-email-form {
     width: 100%;
-    margin-bottom: 15px;
+    background: #fff;
 }
 
-.contact .right form .textarea {
-    height: 80px;
-    width: 100%;
+.contact .php-email-form .form-group {
+    padding-bottom: 8px;
 }
 
-.contact .right form .name {
-    margin-right: 10px;
-}
-
-.contact .right form .field input,
-.contact .right form .textarea textarea {
-    height: 100%;
-    width: 100%;
-    border: 1px solid lightgrey;
-    border-radius: 6px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
-}
-
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus {
-    border-color: #b3b3b3;
-}
-
-.contact .right form .textarea textarea {
-    padding-top: 10px;
-    resize: none;
-}
-
-.contact .right form .button-area {
-    display: flex;
-    align-items: center;
-}
-
-.right form .button-area button {
+.contact .php-email-form .error-message {
+    display: none;
     color: #fff;
-    display: block;
-    width: 160px!important;
-    height: 45px;
-    outline: none;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 6px;
-    cursor: pointer;
-    flex-wrap: nowrap;
-    background: rgb(50, 65, 226);
-    ;
-    border: 2px solid rgb(50, 65, 226);
-    ;
-    transition: all 0.3s ease;
+    background: #ed3c0d;
+    text-align: center;
+    padding: 1500px;
+    font-weight: 600;
 }
 
-.right form .button-area button:hover {
-    color: rgb(50, 65, 226);
-    ;
-    background: none;
+.contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+    border-radius: 4px;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+    border-color: #34b7a7;
+}
+
+.contact .php-email-form input {
+    height: 44px;
+    padding: 10px 12px;
+    width: 500px;
+    align-items: center;
+}
+
+.contact .php-email-form textarea {
+    padding: 10px 12px;
+    width: 500px;
+    height: 100px;
+}
+
+.contact .php-email-form button[type=submit] {
+    background: #34b7a7;
+    border: 0;
+    padding: 10px 30px 12px 30px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+    background: #3dc8b7;
+}
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+#footer {
+    background: #e9e8e6;
+    padding: 30px 0;
+    color: #222222;
+    font-size: 14px;
+    text-align: center;
+}
+
+#footer .credits {
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+#footer .credits a {
+    color: #34b7a7;
 }
 
 
@@ -864,9 +925,4 @@ footer span a:hover {
         font-size: 23px;
         line-height: 38px;
     }
-}
-
-
-}
-
 }
